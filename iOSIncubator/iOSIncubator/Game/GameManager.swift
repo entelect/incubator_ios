@@ -9,5 +9,9 @@
 import Foundation
 
 class GameManager {
+    var lastWinner: String?
     
+    func processEndOfRound() {
+        
+    }
 }

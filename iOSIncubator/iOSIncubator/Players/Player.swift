@@ -9,5 +9,5 @@
 import Foundation
 
 protocol Player {
-
+    var playerType: PlayerType { get }
 }
