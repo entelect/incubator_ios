@@ -19,11 +19,11 @@ class Util {
         return number
     }
     
-    static func stringFromDate(date: NSDate) -> String {
+    static func stringFromDate(date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         
-        let formattedDateString = dateFormatter.string(from: date as Date)
+        let formattedDateString = dateFormatter.string(from: date)
         return formattedDateString
     }
     

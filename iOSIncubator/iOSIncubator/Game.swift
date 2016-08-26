@@ -8,7 +8,12 @@
 
 import Foundation
 
-class Game {
+class Game: NSObject {
     var roundNumber = 0
-    let date = NSDate()
+    let date = Date()
+    
+    override var description: String {
+        let friendlyDateString = Util.stringFromDate(date: date)
+        return "\(roundNumber) rounds played on \(friendlyDateString)"
+    }
 }
