@@ -11,6 +11,7 @@
 		9513A0FD1D6DFF0000D22732 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9513A0FC1D6DFF0000D22732 /* Game.swift */; };
 		9522BDD11D6FFAD700CF283B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9522BDD01D6FFAD700CF283B /* String+Extensions.swift */; };
 		9522BDD31D6FFB0F00CF283B /* NSDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9522BDD21D6FFB0F00CF283B /* NSDate+Extensions.swift */; };
+		95A4A2FC1D80890D004B4A0C /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A4A2FB1D80890D004B4A0C /* HistoryViewController.swift */; };
 		95DCF8901D5CE00700C55ADE /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DCF88F1D5CE00700C55ADE /* Heap.swift */; };
 		95DCF8921D5CE02000C55ADE /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DCF8911D5CE02000C55ADE /* GameManager.swift */; };
 		95DCF8941D5CE03000C55ADE /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DCF8931D5CE03000C55ADE /* Player.swift */; };
@@ -28,6 +29,7 @@
 		9513A0FC1D6DFF0000D22732 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		9522BDD01D6FFAD700CF283B /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "Extensions/String+Extensions.swift"; sourceTree = "<group>"; };
 		9522BDD21D6FFB0F00CF283B /* NSDate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDate+Extensions.swift"; path = "Extensions/NSDate+Extensions.swift"; sourceTree = "<group>"; };
+		95A4A2FB1D80890D004B4A0C /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = History/HistoryViewController.swift; sourceTree = "<group>"; };
 		95DCF88F1D5CE00700C55ADE /* Heap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Heap.swift; path = Game/Heap.swift; sourceTree = "<group>"; };
 		95DCF8911D5CE02000C55ADE /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameManager.swift; path = Game/GameManager.swift; sourceTree = "<group>"; };
 		95DCF8931D5CE03000C55ADE /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = Players/Player.swift; sourceTree = "<group>"; };
@@ -62,6 +64,14 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		95A4A2FA1D8088F4004B4A0C /* History */ = {
+			isa = PBXGroup;
+			children = (
+				95A4A2FB1D80890D004B4A0C /* HistoryViewController.swift */,
+			);
+			name = History;
+			sourceTree = "<group>";
+		};
 		95E35C221D53B20400CD666D = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +91,7 @@
 		95E35C2D1D53B20400CD666D /* iOSIncubator */ = {
 			isa = PBXGroup;
 			children = (
+				95A4A2FA1D8088F4004B4A0C /* History */,
 				9522BDCD1D6FF80000CF283B /* Extensions */,
 				95E35C441D53B4D800CD666D /* Game */,
 				95E35C431D53B4C800CD666D /* Players */,
@@ -189,6 +200,7 @@
 			files = (
 				9522BDD31D6FFB0F00CF283B /* NSDate+Extensions.swift in Sources */,
 				9522BDD11D6FFAD700CF283B /* String+Extensions.swift in Sources */,
+				95A4A2FC1D80890D004B4A0C /* HistoryViewController.swift in Sources */,
 				95E35C311D53B20400CD666D /* HomeViewController.swift in Sources */,
 				9513A0FD1D6DFF0000D22732 /* Game.swift in Sources */,
 				95E35C2F1D53B20400CD666D /* AppDelegate.swift in Sources */,
