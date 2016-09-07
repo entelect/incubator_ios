@@ -47,7 +47,7 @@
                             <constraint firstItem="hfZ-ZW-agd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tJX-fK-3YV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="uQ9-rA-yPR"/>
+                    <navigationItem key="navigationItem" title="Nim" id="uQ9-rA-yPR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
