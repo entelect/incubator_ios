@@ -12,11 +12,28 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        prepareAlertForLongRunningSession()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         promptUserForName()
+    }
+    
+    private func prepareAlertForLongRunningSession() {
+        let thirtyMinutesInSeconds = Double(60 * 30)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + thirtyMinutesInSeconds) {
+            let alertController = UIAlertController(title: "Take a break!", message: "You've been playing for thirty minutes. Don't you think you should take a break?", preferredStyle: .alert)
+            
+            let snarkyAction = UIAlertAction(title: "Do I have to?", style: .cancel, handler: nil)
+            alertController.addAction(snarkyAction)
+            
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
     
     private func promptUserForName() {
