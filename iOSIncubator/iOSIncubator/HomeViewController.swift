@@ -8,8 +8,11 @@
 
 import UIKit
 
+let userNameKey = "userNameKey"
+
 class HomeViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareAlertForLongRunningSession()
@@ -17,7 +20,12 @@ class HomeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        promptUserForName()
+        
+        if let name = UserDefaults.standard.string(forKey: userNameKey) {
+            self.navigationItem.title = name
+        } else {
+            promptUserForName()
+        }
     }
     
     private func prepareAlertForLongRunningSession() {
@@ -41,7 +49,10 @@ class HomeViewController: UIViewController {
         
         let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
             let nameTextField = alertController.textFields![0] as UITextField
-            self.navigationItem.title = nameTextField.text
+            let userName = nameTextField.text
+            
+            self.navigationItem.title = userName
+            UserDefaults.standard.set(userName, forKey: userNameKey)
         }
         alertController.addAction(okAction)
         
