@@ -10,4 +10,8 @@ import UIKit
 
 class HistoryViewController: UITableViewController {
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.title = "Zero games in history"
+    }
+    
 }
