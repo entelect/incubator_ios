@@ -16,7 +16,7 @@
 		95DCF8941D5CE03000C55ADE /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DCF8931D5CE03000C55ADE /* Player.swift */; };
 		95DCF8961D5CE03D00C55ADE /* PlayerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DCF8951D5CE03D00C55ADE /* PlayerType.swift */; };
 		95E35C2F1D53B20400CD666D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E35C2E1D53B20400CD666D /* AppDelegate.swift */; };
-		95E35C311D53B20400CD666D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E35C301D53B20400CD666D /* ViewController.swift */; };
+		95E35C311D53B20400CD666D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E35C301D53B20400CD666D /* HomeViewController.swift */; };
 		95E35C341D53B20400CD666D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E35C321D53B20400CD666D /* Main.storyboard */; };
 		95E35C371D53B20400CD666D /* iOSIncubator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95E35C351D53B20400CD666D /* iOSIncubator.xcdatamodeld */; };
 		95E35C391D53B20400CD666D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95E35C381D53B20400CD666D /* Assets.xcassets */; };
@@ -34,7 +34,7 @@
 		95DCF8951D5CE03D00C55ADE /* PlayerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerType.swift; path = Players/PlayerType.swift; sourceTree = "<group>"; };
 		95E35C2B1D53B20400CD666D /* iOSIncubator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSIncubator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95E35C2E1D53B20400CD666D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		95E35C301D53B20400CD666D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		95E35C301D53B20400CD666D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		95E35C331D53B20400CD666D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		95E35C361D53B20400CD666D /* iOSIncubator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSIncubator.xcdatamodel; sourceTree = "<group>"; };
 		95E35C381D53B20400CD666D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 				95E35C441D53B4D800CD666D /* Game */,
 				95E35C431D53B4C800CD666D /* Players */,
 				95E35C2E1D53B20400CD666D /* AppDelegate.swift */,
-				95E35C301D53B20400CD666D /* ViewController.swift */,
+				95E35C301D53B20400CD666D /* HomeViewController.swift */,
 				95E35C321D53B20400CD666D /* Main.storyboard */,
 				95E35C381D53B20400CD666D /* Assets.xcassets */,
 				95E35C3A1D53B20400CD666D /* LaunchScreen.storyboard */,
@@ -189,7 +189,7 @@
 			files = (
 				9522BDD31D6FFB0F00CF283B /* NSDate+Extensions.swift in Sources */,
 				9522BDD11D6FFAD700CF283B /* String+Extensions.swift in Sources */,
-				95E35C311D53B20400CD666D /* ViewController.swift in Sources */,
+				95E35C311D53B20400CD666D /* HomeViewController.swift in Sources */,
 				9513A0FD1D6DFF0000D22732 /* Game.swift in Sources */,
 				95E35C2F1D53B20400CD666D /* AppDelegate.swift in Sources */,
 				95DCF8961D5CE03D00C55ADE /* PlayerType.swift in Sources */,
