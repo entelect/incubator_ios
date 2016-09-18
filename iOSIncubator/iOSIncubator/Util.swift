@@ -27,4 +27,12 @@ class Util {
         return formattedDateString
     }
     
+    static func orderByDate(games: [Game], isAscending: Bool) -> [Game] {
+        let sorter = NSSortDescriptor(key: "date", ascending: isAscending)
+        let gamesToSort = NSArray(array: games)
+        
+        let sortedObjects = gamesToSort.sortedArray(using: [sorter])
+        return sortedObjects as! [Game]
+    }
+    
 }
