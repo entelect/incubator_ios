@@ -13,7 +13,7 @@ class Game: NSObject {
     let date = Date()
     
     override var description: String {
-        let friendlyDateString = Util.stringFromDate(date: date)
+        let friendlyDateString = date.friendlyFormattedString
         return "\(roundNumber) rounds played on \(friendlyDateString)"
     }
 }

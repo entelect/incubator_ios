@@ -10,23 +10,6 @@ import Foundation
 
 class Util {
     
-    static func numberFromString(string: String) -> NSNumber {
-        let numberFormatter = NumberFormatter()
-        guard let number = numberFormatter.number(from: string) else {
-            return NSNumber(value: 0)
-        }
-        
-        return number
-    }
-    
-    static func stringFromDate(date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        
-        let formattedDateString = dateFormatter.string(from: date)
-        return formattedDateString
-    }
-    
     static func orderByDate(games: [Game], isAscending: Bool) -> [Game] {
         let sorter = NSSortDescriptor(key: "date", ascending: isAscending)
         let gamesToSort = NSArray(array: games)
