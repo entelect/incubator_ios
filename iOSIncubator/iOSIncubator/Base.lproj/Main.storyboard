@@ -28,6 +28,7 @@
                                 <state key="normal" title="View History"/>
                                 <connections>
                                     <action selector="viewHistoryButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DBJ-zf-r3C"/>
+                                    <segue destination="XQE-g5-rr0" kind="show" id="UUE-ff-7kM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFZ-Mx-w1D">
