@@ -1,12 +1,43 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Slj-k3-H2Q">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Slj-k3-H2Q">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="Z3g-Mk-d8D">
+            <objects>
+                <viewController id="KPo-LJ-bMU" customClass="GameViewController" customModule="iOSIncubator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LHZ-td-I2f"/>
+                        <viewControllerLayoutGuide type="bottom" id="bfc-IL-CF6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EqL-O0-SYe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="183-i5-Pzm"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="183-i5-Pzm" firstAttribute="centerY" secondItem="EqL-O0-SYe" secondAttribute="centerY" id="3m2-14-rD5"/>
+                            <constraint firstItem="183-i5-Pzm" firstAttribute="trailing" secondItem="EqL-O0-SYe" secondAttribute="trailingMargin" id="53A-8X-GVe"/>
+                            <constraint firstItem="183-i5-Pzm" firstAttribute="leading" secondItem="EqL-O0-SYe" secondAttribute="leadingMargin" id="FzN-FN-ACm"/>
+                            <constraint firstItem="183-i5-Pzm" firstAttribute="height" secondItem="EqL-O0-SYe" secondAttribute="height" multiplier="0.5" id="xZV-9H-Va8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="heapStackView" destination="183-i5-Pzm" id="CL3-Ql-9RP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BgU-Mb-1Mh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="578" y="1202"/>
+        </scene>
         <!--Title-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -35,6 +66,7 @@
                                 <state key="normal" title="Play"/>
                                 <connections>
                                     <action selector="playButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R6B-uB-NGG"/>
+                                    <segue destination="KPo-LJ-bMU" kind="show" id="5jO-cm-aPO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -52,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1206" y="315"/>
+            <point key="canvasLocation" x="578" y="392"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="Axm-so-OyO">
@@ -64,7 +96,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryCell" id="VFh-y6-XNf">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VFh-y6-XNf" id="f2r-zG-HcD">
                                     <frame key="frameInset" width="375" height="43.5"/>
@@ -80,7 +112,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VmY-9S-oOu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1891" y="312"/>
+            <point key="canvasLocation" x="1690" y="392"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ubs-M8-8KZ">

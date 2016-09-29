@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeapViewController" customModule="iOSIncubator" customModuleProvider="target">
+            <connections>
+                <outlet property="remainingTokensAmountLabel" destination="8gD-11-Zbo" id="hk6-ml-QkN"/>
+                <outlet property="takeTokensButton" destination="mGu-pM-6ZJ" id="QZg-wx-dqn"/>
+                <outlet property="tokensToTakeLabel" destination="zhD-kd-qjt" id="gB6-Hf-NoX"/>
+                <outlet property="tokensToTakeStepper" destination="gPe-5b-EyF" id="JtM-OX-mnd"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Fuv-4a-l0y"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9sD-dh-cfo">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gD-11-Zbo">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhD-kd-qjt">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="gPe-5b-EyF">
+                            <connections>
+                                <action selector="tokenStepperValueChanged:" destination="-1" eventType="valueChanged" id="pUi-oP-jrO"/>
+                            </connections>
+                        </stepper>
+                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="253" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGu-pM-6ZJ">
+                            <state key="normal" title="Take"/>
+                            <connections>
+                                <action selector="takeTokensTapped:" destination="-1" eventType="touchUpInside" id="g0j-Nu-JZP"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="9sD-dh-cfo" secondAttribute="bottom" id="5U7-3O-lcf"/>
+                <constraint firstItem="9sD-dh-cfo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="D0W-tG-nLI"/>
+                <constraint firstItem="9sD-dh-cfo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Jsu-Gt-OaD"/>
+                <constraint firstAttribute="trailing" secondItem="9sD-dh-cfo" secondAttribute="trailing" id="WEv-Lm-cnt"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

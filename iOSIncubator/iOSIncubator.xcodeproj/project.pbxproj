@@ -8,12 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9513A0FB1D6DFA3800D22732 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9513A0FA1D6DFA3800D22732 /* Util.swift */; };
-		9513A0FD1D6DFF0000D22732 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9513A0FC1D6DFF0000D22732 /* Game.swift */; };
 		9522BDD11D6FFAD700CF283B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9522BDD01D6FFAD700CF283B /* String+Extensions.swift */; };
 		9522BDD31D6FFB0F00CF283B /* NSDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9522BDD21D6FFB0F00CF283B /* NSDate+Extensions.swift */; };
 		95A4A2FC1D80890D004B4A0C /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A4A2FB1D80890D004B4A0C /* HistoryViewController.swift */; };
-		95DCF8901D5CE00700C55ADE /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DCF88F1D5CE00700C55ADE /* Heap.swift */; };
-		95DCF8921D5CE02000C55ADE /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DCF8911D5CE02000C55ADE /* GameManager.swift */; };
 		95DCF8941D5CE03000C55ADE /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DCF8931D5CE03000C55ADE /* Player.swift */; };
 		95DCF8961D5CE03D00C55ADE /* PlayerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DCF8951D5CE03D00C55ADE /* PlayerType.swift */; };
 		95E35C2F1D53B20400CD666D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E35C2E1D53B20400CD666D /* AppDelegate.swift */; };
@@ -22,16 +19,19 @@
 		95E35C371D53B20400CD666D /* iOSIncubator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95E35C351D53B20400CD666D /* iOSIncubator.xcdatamodeld */; };
 		95E35C391D53B20400CD666D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95E35C381D53B20400CD666D /* Assets.xcassets */; };
 		95E35C3C1D53B20400CD666D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E35C3A1D53B20400CD666D /* LaunchScreen.storyboard */; };
+		95FF19291D9982DC007CD65D /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF19241D9982DC007CD65D /* Game.swift */; };
+		95FF192A1D9982DC007CD65D /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF19251D9982DC007CD65D /* GameManager.swift */; };
+		95FF192B1D9982DC007CD65D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF19261D9982DC007CD65D /* GameViewController.swift */; };
+		95FF192C1D9982DC007CD65D /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF19271D9982DC007CD65D /* Heap.swift */; };
+		95FF192D1D9982DC007CD65D /* HeapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95FF19281D9982DC007CD65D /* HeapViewController.xib */; };
+		95FF192F1D9982FD007CD65D /* HeapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF192E1D9982FD007CD65D /* HeapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9513A0FA1D6DFA3800D22732 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
-		9513A0FC1D6DFF0000D22732 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		9522BDD01D6FFAD700CF283B /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "Extensions/String+Extensions.swift"; sourceTree = "<group>"; };
 		9522BDD21D6FFB0F00CF283B /* NSDate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDate+Extensions.swift"; path = "Extensions/NSDate+Extensions.swift"; sourceTree = "<group>"; };
 		95A4A2FB1D80890D004B4A0C /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = History/HistoryViewController.swift; sourceTree = "<group>"; };
-		95DCF88F1D5CE00700C55ADE /* Heap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Heap.swift; path = Game/Heap.swift; sourceTree = "<group>"; };
-		95DCF8911D5CE02000C55ADE /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameManager.swift; path = Game/GameManager.swift; sourceTree = "<group>"; };
 		95DCF8931D5CE03000C55ADE /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = Players/Player.swift; sourceTree = "<group>"; };
 		95DCF8951D5CE03D00C55ADE /* PlayerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerType.swift; path = Players/PlayerType.swift; sourceTree = "<group>"; };
 		95E35C2B1D53B20400CD666D /* iOSIncubator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSIncubator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +42,12 @@
 		95E35C381D53B20400CD666D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95E35C3B1D53B20400CD666D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95E35C3D1D53B20400CD666D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95FF19241D9982DC007CD65D /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		95FF19251D9982DC007CD65D /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		95FF19261D9982DC007CD65D /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		95FF19271D9982DC007CD65D /* Heap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
+		95FF19281D9982DC007CD65D /* HeapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeapViewController.xib; sourceTree = "<group>"; };
+		95FF192E1D9982FD007CD65D /* HeapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,11 +125,14 @@
 		95E35C441D53B4D800CD666D /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				95DCF88F1D5CE00700C55ADE /* Heap.swift */,
-				95DCF8911D5CE02000C55ADE /* GameManager.swift */,
-				9513A0FC1D6DFF0000D22732 /* Game.swift */,
+				95FF19241D9982DC007CD65D /* Game.swift */,
+				95FF19251D9982DC007CD65D /* GameManager.swift */,
+				95FF19261D9982DC007CD65D /* GameViewController.swift */,
+				95FF19271D9982DC007CD65D /* Heap.swift */,
+				95FF19281D9982DC007CD65D /* HeapViewController.xib */,
+				95FF192E1D9982FD007CD65D /* HeapViewController.swift */,
 			);
-			name = Game;
+			path = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +196,7 @@
 			files = (
 				95E35C3C1D53B20400CD666D /* LaunchScreen.storyboard in Resources */,
 				95E35C391D53B20400CD666D /* Assets.xcassets in Resources */,
+				95FF192D1D9982DC007CD65D /* HeapViewController.xib in Resources */,
 				95E35C341D53B20400CD666D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,17 +209,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				9522BDD31D6FFB0F00CF283B /* NSDate+Extensions.swift in Sources */,
+				95FF192C1D9982DC007CD65D /* Heap.swift in Sources */,
+				95FF19291D9982DC007CD65D /* Game.swift in Sources */,
 				9522BDD11D6FFAD700CF283B /* String+Extensions.swift in Sources */,
+				95FF192A1D9982DC007CD65D /* GameManager.swift in Sources */,
+				95FF192B1D9982DC007CD65D /* GameViewController.swift in Sources */,
+				95FF192F1D9982FD007CD65D /* HeapViewController.swift in Sources */,
 				95A4A2FC1D80890D004B4A0C /* HistoryViewController.swift in Sources */,
 				95E35C311D53B20400CD666D /* HomeViewController.swift in Sources */,
-				9513A0FD1D6DFF0000D22732 /* Game.swift in Sources */,
 				95E35C2F1D53B20400CD666D /* AppDelegate.swift in Sources */,
 				95DCF8961D5CE03D00C55ADE /* PlayerType.swift in Sources */,
 				9513A0FB1D6DFA3800D22732 /* Util.swift in Sources */,
 				95E35C371D53B20400CD666D /* iOSIncubator.xcdatamodeld in Sources */,
-				95DCF8901D5CE00700C55ADE /* Heap.swift in Sources */,
 				95DCF8941D5CE03000C55ADE /* Player.swift in Sources */,
-				95DCF8921D5CE02000C55ADE /* GameManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
