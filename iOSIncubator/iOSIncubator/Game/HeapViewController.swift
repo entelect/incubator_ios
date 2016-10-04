@@ -47,16 +47,22 @@ class HeapViewController: UIViewController {
     @IBAction func takeTokensTapped(_ sender: AnyObject) {
         guard tokensToTakeStepper.value > 0 else { return }
         
-        remainingTokens -= Int(tokensToTakeStepper.value)
-        tokensToTakeStepper.value = 0
-        tokensToTakeStepper.maximumValue = Double(remainingTokens)
-            
-        setLabelsText()
+        takeTokens(Int(tokensToTakeStepper.value))
     }
     
     func setLabelsText() {
         remainingTokensAmountLabel.text = String(remainingTokens)
         tokensToTakeLabel.text = String(Int(tokensToTakeStepper.value))
+    }
+    
+    func takeTokens(_ amount: Int) {
+        remainingTokens -= amount
+        tokensToTakeStepper.value = 0
+        tokensToTakeStepper.maximumValue = Double(remainingTokens)
+        
+        setLabelsText()
+        
+        delegate?.tokensTaken(from: self)
     }
     
 }

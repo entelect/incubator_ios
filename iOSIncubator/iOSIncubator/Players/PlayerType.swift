@@ -9,6 +9,6 @@
 import Foundation
 
 enum PlayerType {
-    case Human
-    case Computer
+    case human
+    case computer
 }

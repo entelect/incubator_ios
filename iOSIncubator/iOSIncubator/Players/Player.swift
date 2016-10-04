@@ -8,6 +8,10 @@
 
 import Foundation
 
-protocol Player {
-    var playerType: PlayerType { get }
+struct Player: Equatable {
+    let playerType: PlayerType
+    
+    static func ==(lhs: Player, rhs: Player) -> Bool {
+        return lhs.playerType == rhs.playerType
+    }
 }
