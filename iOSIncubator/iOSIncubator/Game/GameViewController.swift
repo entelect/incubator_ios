@@ -77,6 +77,7 @@ class GameViewController: UIViewController, HeapDelegate {
             
         } else {
             currentState = .finished(currentPlayer)
+            endGame(winner: currentPlayer)
         }
     }
     
@@ -84,11 +85,19 @@ class GameViewController: UIViewController, HeapDelegate {
         let delay = DispatchTime.now() + .seconds(1)
         DispatchQueue.main.asyncAfter(deadline: delay, execute: {
             let heapsWithTokens = self.heapViewControllers.filter({$0.remainingTokens > 0})
+            
             let randomHeapIndex = Int(arc4random_uniform(UInt32(heapsWithTokens.count)))
             let randomHeap = heapsWithTokens[randomHeapIndex]
             
-            let randomAmountOfTokens = Int(arc4random_uniform(UInt32(randomHeap.remainingTokens + 1)))
-            randomHeap.takeTokens(randomAmountOfTokens)
+            var amountOfTokensToTake = 0
+            
+            if heapsWithTokens.count > 1 {
+                amountOfTokensToTake = Int(arc4random_uniform(UInt32(randomHeap.remainingTokens + 1)))
+            } else {
+                amountOfTokensToTake = heapsWithTokens.first!.remainingTokens
+            }
+            
+            randomHeap.takeTokens(amountOfTokensToTake)
         })
     }
     
@@ -107,5 +116,24 @@ class GameViewController: UIViewController, HeapDelegate {
         } else {
             currentPlayerLabel.isHidden = true
         }
+    }
+    
+    func endGame(winner player: Player) {
+        let humanWon = "You won! Congratulations!"
+        let computerWon = "You lost to a random number generator. How does that make you feel?"
+        let alertBody = player.playerType == .human ? humanWon : computerWon
+        
+        displayAlertViewForEndGame(with: alertBody)
+        
+        
+    }
+    
+    func displayAlertViewForEndGame(with alertBody: String) {
+        let alertController = UIAlertController(title: "Game Over", message: alertBody, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: {(_) in let _ = self.navigationController?.popViewController(animated: true)})
+        alertController.addAction(okAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+
     }
 }
