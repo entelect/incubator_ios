@@ -17,3 +17,21 @@ class Game: NSObject {
         return "\(roundNumber) rounds played on \(friendlyDateString)"
     }
 }
+
+extension Game: Comparable {
+    static func <(lhs: Game, rhs: Game) -> Bool {
+        return lhs.date < rhs.date
+    }
+    
+    static func <=(lhs: Game, rhs: Game) -> Bool {
+        return lhs.date <= rhs.date
+    }
+
+    static func >=(lhs: Game, rhs: Game) -> Bool {
+        return lhs.date >= rhs.date
+    }
+
+    static func >(lhs: Game, rhs: Game) -> Bool {
+        return lhs.date > rhs.date
+    }
+}

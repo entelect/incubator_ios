@@ -12,6 +12,7 @@
 		9522BDD31D6FFB0F00CF283B /* NSDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9522BDD21D6FFB0F00CF283B /* NSDate+Extensions.swift */; };
 		9581EC7C1DA5704700F74D3A /* GameHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581EC7B1DA5704700F74D3A /* GameHistory.swift */; };
 		9581EC7E1DA570A900F74D3A /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581EC7D1DA570A900F74D3A /* Notifications.swift */; };
+		9586DC961DA6A79E00137112 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9586DC951DA6A79E00137112 /* UserDefaultsKeys.swift */; };
 		95A4A2FC1D80890D004B4A0C /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A4A2FB1D80890D004B4A0C /* HistoryViewController.swift */; };
 		95DCF8941D5CE03000C55ADE /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DCF8931D5CE03000C55ADE /* Player.swift */; };
 		95DCF8961D5CE03D00C55ADE /* PlayerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DCF8951D5CE03D00C55ADE /* PlayerType.swift */; };
@@ -35,6 +36,7 @@
 		9522BDD21D6FFB0F00CF283B /* NSDate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDate+Extensions.swift"; path = "Extensions/NSDate+Extensions.swift"; sourceTree = "<group>"; };
 		9581EC7B1DA5704700F74D3A /* GameHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameHistory.swift; sourceTree = "<group>"; };
 		9581EC7D1DA570A900F74D3A /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		9586DC951DA6A79E00137112 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		95A4A2FB1D80890D004B4A0C /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = History/HistoryViewController.swift; sourceTree = "<group>"; };
 		95DCF8931D5CE03000C55ADE /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = Players/Player.swift; sourceTree = "<group>"; };
 		95DCF8951D5CE03D00C55ADE /* PlayerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerType.swift; path = Players/PlayerType.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				95E35C351D53B20400CD666D /* iOSIncubator.xcdatamodeld */,
 				9513A0FA1D6DFA3800D22732 /* Util.swift */,
 				9581EC7D1DA570A900F74D3A /* Notifications.swift */,
+				9586DC951DA6A79E00137112 /* UserDefaultsKeys.swift */,
 			);
 			path = iOSIncubator;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				95FF192C1D9982DC007CD65D /* Heap.swift in Sources */,
 				95FF19291D9982DC007CD65D /* Game.swift in Sources */,
 				9522BDD11D6FFAD700CF283B /* String+Extensions.swift in Sources */,
+				9586DC961DA6A79E00137112 /* UserDefaultsKeys.swift in Sources */,
 				9581EC7C1DA5704700F74D3A /* GameHistory.swift in Sources */,
 				95FF192A1D9982DC007CD65D /* GameManager.swift in Sources */,
 				95FF192B1D9982DC007CD65D /* GameViewController.swift in Sources */,

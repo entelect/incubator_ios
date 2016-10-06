@@ -104,7 +104,7 @@ class GameViewController: UIViewController, HeapDelegate {
     func updatePlayerLabel() {
         if case .playing(let player) = currentState {
             if player.playerType == .human {
-                if let playerName = UserDefaults.standard.string(forKey: userNameKey) {
+                if let playerName = UserDefaults.standard.string(forKey: UserDefaultsKeys.userName.rawValue) {
                     currentPlayerLabel.text = "\(playerName)'s turn"
                 } else {
                     currentPlayerLabel.text = "Your turn"
@@ -125,7 +125,8 @@ class GameViewController: UIViewController, HeapDelegate {
         
         displayAlertViewForEndGame(with: alertBody)
         
-        
+        <#set up game object#>
+        GameHistory.addToHistory(<#T##GameHistory#>)
     }
     
     func displayAlertViewForEndGame(with alertBody: String) {

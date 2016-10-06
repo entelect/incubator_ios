@@ -11,7 +11,8 @@ import UIKit
 class HistoryViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
-        self.title = "Zero games in history"
+        let games = UserDefaults.standard.array(forKey: UserDefaultsKeys.gameHistory.rawValue) ?? []
+        self.title = "\(games.count) games in history"
     }
     
 }

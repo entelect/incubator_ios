@@ -8,8 +8,6 @@
 
 import UIKit
 
-let userNameKey = "userNameKey"
-
 class HomeViewController: UIViewController {
 
     
@@ -21,7 +19,7 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if let name = UserDefaults.standard.string(forKey: userNameKey) {
+        if let name = UserDefaults.standard.string(forKey: UserDefaultsKeys.userName.rawValue) {
             self.navigationItem.title = name
         } else {
             promptUserForName()
@@ -52,7 +50,7 @@ class HomeViewController: UIViewController {
             let userName = nameTextField.text
             
             self.navigationItem.title = userName
-            UserDefaults.standard.set(userName, forKey: userNameKey)
+            UserDefaults.standard.set(userName, forKey: UserDefaultsKeys.userName.rawValue)
         }
         alertController.addAction(okAction)
         
