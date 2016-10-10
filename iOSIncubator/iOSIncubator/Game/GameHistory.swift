@@ -17,12 +17,12 @@ class GameHistory {
     func addToHistory(_ game: Game) {
         let userDefaults = UserDefaults.standard
         
-        if var games = userDefaults.array(forKey: UserDefaultsKeys.gameHistory.rawValue) as? [Game] {
-            games.append(game)
-            games.sort()
+        let gameData = NSKeyedArchiver.archivedData(withRootObject: game)
+        if var games = userDefaults.array(forKey: UserDefaultsKeys.gameHistory.rawValue) as? [Data] {
+            games.append(gameData)
             userDefaults.set(games, forKey: UserDefaultsKeys.gameHistory.rawValue)
         } else {
-            userDefaults.set([game], forKey: UserDefaultsKeys.gameHistory.rawValue)
+            userDefaults.set([gameData], forKey: UserDefaultsKeys.gameHistory.rawValue)
         }
         
         let notification = Notification.Name(rawValue: Notifications.historyChanged.rawValue)

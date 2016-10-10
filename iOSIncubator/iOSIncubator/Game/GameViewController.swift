@@ -18,13 +18,15 @@ class GameViewController: UIViewController, HeapDelegate {
     
     @IBOutlet weak var heapStackView: UIStackView!
     @IBOutlet weak var currentPlayerLabel: UILabel!
+    
     var heapViewControllers: [HeapViewController]
-    var currentState: GameState
     var players: (human: Player, computer: Player)
+    
+    var currentGame = Game()
+    var currentState = GameState.start
     
     required init?(coder aDecoder: NSCoder) {
         heapViewControllers = Array()
-        currentState = .start
         
         players.human = Player(playerType: .human)
         players.computer = Player(playerType: .computer)
@@ -63,6 +65,10 @@ class GameViewController: UIViewController, HeapDelegate {
     func handleStateChange() {
         guard case .playing(let currentPlayer) = currentState else { return }
         
+        if currentPlayer.playerType == .human {
+            currentGame.roundNumber += 1
+        }
+        
         let allRemainingTokens = heapViewControllers.reduce(0, {(currentResult, heap) in return currentResult + heap.remainingTokens})
         
         if allRemainingTokens > 0 {
@@ -76,7 +82,6 @@ class GameViewController: UIViewController, HeapDelegate {
             }
             
         } else {
-            currentState = .finished(currentPlayer)
             endGame(winner: currentPlayer)
         }
     }
@@ -92,7 +97,7 @@ class GameViewController: UIViewController, HeapDelegate {
             var amountOfTokensToTake = 0
             
             if heapsWithTokens.count > 1 {
-                amountOfTokensToTake = Int(arc4random_uniform(UInt32(randomHeap.remainingTokens + 1)))
+                amountOfTokensToTake = Int(arc4random_uniform(UInt32(randomHeap.remainingTokens)) + 1)
             } else {
                 amountOfTokensToTake = heapsWithTokens.first!.remainingTokens
             }
@@ -119,14 +124,15 @@ class GameViewController: UIViewController, HeapDelegate {
     }
     
     func endGame(winner player: Player) {
+        currentState = .finished(player)
+        currentGame.winnerType = player.playerType
+        
         let humanWon = "You won! Congratulations!"
         let computerWon = "You lost to a random number generator. How does that make you feel?"
         let alertBody = player.playerType == .human ? humanWon : computerWon
-        
         displayAlertViewForEndGame(with: alertBody)
         
-        <#set up game object#>
-        GameHistory.addToHistory(<#T##GameHistory#>)
+        GameHistory.sharedInstance.addToHistory(currentGame)
     }
     
     func displayAlertViewForEndGame(with alertBody: String) {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum PlayerType {
+enum PlayerType: Int {
     case human
     case computer
 }
