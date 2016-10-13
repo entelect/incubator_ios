@@ -52,6 +52,7 @@ class HomeViewController: UIViewController {
             self.navigationItem.title = userName
             UserDefaults.standard.set(userName, forKey: UserDefaultsKeys.userName.rawValue)
         }
+        okAction.isEnabled = false
         alertController.addAction(okAction)
         
         
@@ -61,6 +62,13 @@ class HomeViewController: UIViewController {
         
         alertController.addTextField { (textField) in
             textField.placeholder = "Name"
+            
+            NotificationCenter.default.addObserver(forName: .UITextFieldTextDidChange, object: textField, queue: OperationQueue.main, using: {_ in
+                let textCount = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines).characters.count ?? 0
+                let textIsNotEmpty = textCount > 0
+                okAction.isEnabled = textIsNotEmpty
+            
+            })
         }
         
         alertController.view.setNeedsLayout()
