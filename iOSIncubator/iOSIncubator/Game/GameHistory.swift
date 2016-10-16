@@ -12,6 +12,11 @@ class GameHistory {
     static let sharedInstance = GameHistory()
     
     init() {
+        NotificationCenter.default.addObserver(forName: Notification.Name(rawValue: "gameFinished"), object: nil, queue: nil, using: { [weak self] (notification: Notification) in
+            if let game = notification.object as? Game {
+                self?.addToHistory(game)
+            }
+        })
     }
     
     private func addToHistory(_ game: Game) {
