@@ -14,6 +14,10 @@ class HistoryViewController: UITableViewController {
     
     var games: [Game]!
     
+    override func viewDidLoad() {
+        NotificationCenter.default.addObserver(forName: Notification.Name(rawValue: Notifications.historyChanged.rawValue), object: nil, queue: nil, using: {[weak self] _ in self?.tableView.reloadData()})
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         let gamesData = UserDefaults.standard.array(forKey: UserDefaultsKeys.gameHistory.rawValue)
         
