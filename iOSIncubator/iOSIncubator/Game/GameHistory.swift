@@ -14,7 +14,7 @@ class GameHistory {
     init() {
     }
     
-    func addToHistory(_ game: Game) {
+    private func addToHistory(_ game: Game) {
         let userDefaults = UserDefaults.standard
         
         let gameData = NSKeyedArchiver.archivedData(withRootObject: game)
