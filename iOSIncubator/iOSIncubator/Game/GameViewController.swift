@@ -132,7 +132,7 @@ class GameViewController: UIViewController, HeapDelegate {
         let alertBody = player.playerType == .human ? humanWon : computerWon
         displayAlertViewForEndGame(with: alertBody)
         
-        GameHistory.sharedInstance.addToHistory(currentGame)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "gameFinishedNotification"), object: currentGame)
     }
     
     func displayAlertViewForEndGame(with alertBody: String) {
