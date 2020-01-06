@@ -38,7 +38,7 @@ class GameViewController: UIViewController, HeapDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         for heap in heapViewControllers {
-            self.addChildViewController(heap)
+            self.addChild(heap)
             heapStackView.addArrangedSubview(heap.view)
         }
         currentState = .playing(players.human)

@@ -63,7 +63,7 @@ class HomeViewController: UIViewController {
         alertController.addTextField { (textField) in
             textField.placeholder = "Name"
             
-            NotificationCenter.default.addObserver(forName: .UITextFieldTextDidChange, object: textField, queue: OperationQueue.main, using: {_ in
+            NotificationCenter.default.addObserver(forName: UITextField.textDidChangeNotification, object: textField, queue: OperationQueue.main, using: {_ in
                 let textCount = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines).characters.count ?? 0
                 let textIsNotEmpty = textCount > 0
                 okAction.isEnabled = textIsNotEmpty
