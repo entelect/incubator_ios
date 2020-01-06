@@ -21,7 +21,7 @@ class HistoryViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         let gamesData = UserDefaults.standard.array(forKey: UserDefaultsKeys.gameHistory.rawValue)
         
-        games = gamesData?.flatMap({
+        games = gamesData?.compactMap({
             guard let data = $0 as? Data else { return nil }
             return NSKeyedUnarchiver.unarchiveObject(with: data) as? Game
         }) ?? []
